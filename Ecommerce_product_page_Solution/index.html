@@ -12,8 +12,9 @@
 <body>
     <div class="header">
         <div class="nav_links">
+            <img src="./Images/icon-menu.svg" alt="menu" class="mobile">
             <img  class="logo" src="Images/logo.svg" alt="Logo">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#">Collections</a></li>
                 <li><a href="#">Men</a></li>
                 <li><a href="#">Women</a></li>
@@ -28,7 +29,33 @@
     </div>
     <div class="container">
         <div class="product_image">
-            <img  class="main_product_img" src="Images/image-product-1.jpg" alt="Product Image" width="400px">
+            <!-- <div class="img_controls"> -->
+                <svg 
+                    width="20" 
+                    height="20" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="img_controls prev_img">
+                    <path d="M11 1 3 9l8 8"
+                    stroke="#1D2026" 
+                    stroke-width="3" 
+                    fill="none" 
+                    fill-rule="evenodd"/>
+                </svg>
+            <!-- </div> -->
+            <!-- <img src="./Images/icon-previous.svg" alt="Previous Image" class="mobile img_controls"> -->
+            <img  class="main_product_img" src="Images/image-product-1.jpg" alt="Product Image">
+                <svg 
+                    width="20" 
+                    height="20" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    class="img_controls next_img">
+                    <path d="m2 1 8 8-8 8" 
+                    stroke="#1D2026" 
+                    stroke-width="3" 
+                    fill="none" 
+                    fill-rule="evenodd"/>
+                </svg>
+            <!-- </div> -->
             <div class="thumbnail">
                 <img class="active" style="border:2px solid hsl(26, 100%, 55%);" src="Images/image-product-1-thumbnail.jpg" alt="Product 1 Thumbnail">
                 <img src="Images/image-product-2-thumbnail.jpg" alt="Product 2 Thumbnail">
@@ -42,9 +69,11 @@
             <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
             durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
             <div class="Price">
-                <span class="price">$125.00</span>
-                <span class="off"><b>50%</b></span>
-                <p class="prev_price">$250.00</p>
+                <div class="details">
+                    <span class="price">$125.00</span>
+                    <span class="off"><b>50%</b></span>
+                </div>
+                <span class="prev_price">$250.00</span>
             </div>
             
             <div class="quantity_action">
@@ -54,10 +83,10 @@
                     <img src="Images/icon-plus.svg" alt="Increment Icon">
                 </div>
                 <div class="cartBtn">
-                    <!-- <img src="Images/icon-cart.svg" alt="Cart Icon" class="cartIcon"> -->
+                    <!-- <img src="Images/icon-cart.svg" alt="Cart Icon" class="con"> -->
                     <svg 
                         width="22" height="20" 
-                        xmlns="http://www.w3.org/2000/svg">
+                        xmlns="http://www.w3.org/2000/svg" class="cartIcon">
                         <path 
                             d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" 
                             fill="#ffffff" 
