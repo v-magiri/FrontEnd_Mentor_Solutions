@@ -35,36 +35,38 @@
         </div>
         <div class="calc_layout">
             <div class="console">
-                <input type="text">
+                <form action="" name="console">
+                    <input type="text" name="text" readonly id="console">
+                </form>
             </div>
             <div class="calc_details">
                 <div class="layout_row col_1">
-                    <span id="num_7" class="num_button">7</span>
-                    <span id="num_4" class="num_button">4</span>
-                    <span id="num_1" class="num_button">1</span>
-                    <span id="point" class="num_button">.</span>
+                    <span id="num_7" class="num_button" onclick="document.console.text.value+='7'">7</span>
+                    <span id="num_4" class="num_button" onclick="document.console.text.value+='4'">4</span>
+                    <span id="num_1" class="num_button" onclick="document.console.text.value+='1'">1</span>
+                    <span id="point" class="num_button" onclick="document.console.text.value+='.'">.</span>
                 </div>
                 <div class="layout_row col_2">
-                    <span id="num_8" class="num_button">8</span>
-                    <span id="num_5" class="num_button">5</span>
-                    <span id="num_2" class="num_button">2</span>
-                    <span id="num_0" class="num_button">0</span>
+                    <span id="num_8" class="num_button" onclick="document.console.text.value+='8'">8</span>
+                    <span id="num_5" class="num_button" onclick="document.console.text.value+='5'">5</span>
+                    <span id="num_2" class="num_button" onclick="document.console.text.value+='2'">2</span>
+                    <span id="num_0" class="num_button" onclick="document.console.text.value+='0'">0</span>
                 </div>
                 <div class="layout_row col_3">
-                    <span id="num_9" class="num_button">9</span>
-                    <span id="num_6" class="num_button">6</span>
-                    <span id="num_3" class="num_button">3</span>
-                    <span id="forward_slash" class="num_button">/</span>
+                    <span id="num_9" class="num_button" onclick="document.console.text.value+='9'">9</span>
+                    <span id="num_6" class="num_button" onclick="document.console.text.value+='6'">6</span>
+                    <span id="num_3" class="num_button" onclick="document.console.text.value+='3'">3</span>
+                    <span id="forward_slash" class="num_button" onclick="document.console.text.value+='/'">/</span>
                 </div>
                 <div class="layout_row col_4">
-                    <span id="del" class="symbol">DEL</span>
-                    <span id="add" class="num_button">+</span>
-                    <span id="subtract" class="num_button">-</span>
-                    <span id="multiply" class="num_button">x</span>
+                    <span id="del" class="symbol" onclick="del()">DEL</span>
+                    <span id="add" class="num_button" onclick="document.console.text.value+='+'">+</span>
+                    <span id="subtract" class="num_button" onclick="document.console.text.value+='-'">-</span>
+                    <span id="multiply" class="num_button" onclick="document.console.text.value+='*'">x</span>
                 </div>
                 <div class="layout_row col_5">
-                    <span id="resetBtn" class="symbol">Reset</span>
-                    <span id="equalBtn" class="equalBtn">=</span>
+                    <span id="resetBtn" class="symbol" onclick="document.console.text.value=''">Reset</span>
+                    <span id="equalBtn" class="equalBtn" onclick="document.console.text.value=eval(console.text.value)">=</span>
                 </div>
             </div>
             
@@ -74,5 +76,6 @@
             Coded by <a href="#">Victor Magiri</a>.
         </div>
     </div>
+    <script src="./JS/script.js"></script>
 </body>
 </html>

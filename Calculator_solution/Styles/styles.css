@@ -17,8 +17,8 @@ body{
     width:30%;
     margin:auto;   
     display: grid; 
-    margin-top:4%;
-    height:100vh;
+    margin-top:3%;
+    height:70vh;
     justify-content: center;
     align-items: center;
 }
@@ -45,7 +45,8 @@ body{
     justify-content: flex-end;
 }
 .theme_switcher_txt span{
-    padding-right:0.9em;
+    padding-right:0.6em;
+    font-weight: 700;
     cursor: pointer;
 }
 [type="radio"]{
@@ -74,11 +75,11 @@ body{
     display: grid;
     width:100%;
     padding:0.8em;
-    border:2px solid green;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,2.5em);
     font-size: 32px;
     justify-content: center;
     gap:0.6em;
+    border-radius: 0.4em;
     grid-template-areas: 
                         'col_1 col_2 col_3 col_4'
                         'col_1 col_2 col_3 col_4' 
@@ -89,7 +90,7 @@ body{
 .layout_row{
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(4,1.5em);
     row-gap: 0.6em;
 }
 .col_1{
@@ -109,21 +110,19 @@ body{
     display: grid;
     text-align: center;
     justify-content: space-between;
-    /* align-content: flex-end; */
     column-gap: 0.6em;
     grid-template-rows: 2em;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,5.6em);
 }
 .console input{
-    min-height: 1.5em;
-    /* width: 100%; */
+    min-height: 2.5em;
     background-color:hsl(224, 36%, 15%);
     border-radius: 0.4em;
     border: none;
     color:white;
-    /* font-weight: 900; */
+    width: 100%;
     margin-bottom: 2%;
-    font-size: 3em;
+    font-size: 32px;
     text-align: end;
 }
 input:focus{
@@ -132,22 +131,28 @@ input:focus{
 .num_button{
     text-align: center;
     background-color: hsl(30, 25%, 89%);
-    padding:0.7em;
+    padding:0.2em;
     border-radius: 0.4rem;
+    cursor: pointer;
 }
 .symbol{
     text-align: center;
     border-radius: 0.4rem;
-    padding:0.6em 1em;
+    padding:0.2em;
     border: none;
+    cursor: pointer;
     color:white;
     background-color: hsl(225, 21%, 49%);
+}
+#resetBtn{
+    padding:0.4em 0;
 }
 .equalBtn{
     background-color:  hsl(6, 70%, 34%);
     color: white;
-    padding:0.6em 1em;
+    padding:0.4em 0;
     border-radius: 0.4rem;
+    cursor: pointer;
 }
 
 .attribution{
