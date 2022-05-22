@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+::theme_1{
+    --screen_background:hsl(224, 36%, 15%);
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+    background-color: hsl(221, 14%, 31%);
+}
+.container{
+    width:30%;
+    margin:auto;   
+    display: grid; 
+    margin-top:4%;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    display: flex;
+    color:white;
+    flex-direction: column;
+}
+.theme_switcher{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.themeBox h3{
+    font-size:1.8em;
+}
+.theme_switcher p{
+    font-size: 0.7em;
+    margin-right: 0.8em;
+}
+.theme_switcher_txt{
+    display: flex;
+    padding: 0 0.5em;
+    justify-content: flex-end;
+}
+.theme_switcher_txt span{
+    padding-right:0.9em;
+    cursor: pointer;
+}
+[type="radio"]{
+    cursor: pointer;
+    padding-top:2%;
+    width:fit-content;
+    background-color:hsl(6, 70%, 34%);
+}
+.theme_switcherBtn{
+    display: flex;
+    justify-content: space-between;
+    padding:4px;
+    width:60px;
+    background-color: hsl(223, 31%, 20%);
+    align-items: center;
+    border-radius:10px;
+}
+.themeBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.6em;
+    margin-bottom:2%;
+}
+.calc_details{
+    background-color:  hsl(223, 31%, 20%);
+    display: grid;
+    width:100%;
+    padding:0.8em;
+    border:2px solid green;
+    grid-template-columns: repeat(4,1fr);
+    font-size: 32px;
+    justify-content: center;
+    gap:0.6em;
+    grid-template-areas: 
+                        'col_1 col_2 col_3 col_4'
+                        'col_1 col_2 col_3 col_4' 
+                        'col_1 col_2 col_3 col_4'
+                        'col_1 col_2 col_3 col_4'
+                        'col_5 col_5 col_5 col_5';
+}
+.layout_row{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    row-gap: 0.6em;
+}
+.col_1{
+    grid-area: col_1;
+}
+.col_2{
+    grid-area: col_2;
+}
+.col_3{
+    grid-area: col_3;
+}
+.col_4{
+    grid-area: col_4;
+}
+.col_5{
+    grid-area: col_5;
+    display: grid;
+    text-align: center;
+    justify-content: space-between;
+    /* align-content: flex-end; */
+    column-gap: 0.6em;
+    grid-template-rows: 2em;
+    grid-template-columns: repeat(2,1fr);
+}
+.console input{
+    min-height: 1.5em;
+    /* width: 100%; */
+    background-color:hsl(224, 36%, 15%);
+    border-radius: 0.4em;
+    border: none;
+    color:white;
+    /* font-weight: 900; */
+    margin-bottom: 2%;
+    font-size: 3em;
+    text-align: end;
+}
+input:focus{
+    outline: none;
+}
+.num_button{
+    text-align: center;
+    background-color: hsl(30, 25%, 89%);
+    padding:0.7em;
+    border-radius: 0.4rem;
+}
+.symbol{
+    text-align: center;
+    border-radius: 0.4rem;
+    padding:0.6em 1em;
+    border: none;
+    color:white;
+    background-color: hsl(225, 21%, 49%);
+}
+.equalBtn{
+    background-color:  hsl(6, 70%, 34%);
+    color: white;
+    padding:0.6em 1em;
+    border-radius: 0.4rem;
+}
+
+.attribution{
+    font-size:1.5em;
+    text-align: center;
+    padding:2em;
+    line-height: 1.5em;
+    
+}
