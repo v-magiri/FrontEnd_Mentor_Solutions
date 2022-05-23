@@ -54,3 +54,10 @@ input:checked{
     background-color: var(--toggle_key_background);
     box-shadow: 0 3px var(--soft_cyan);
 }
+.attribution{
+    color:var(--text_light_color);
+}
+.attribution a{
+    color:var(--white_text);
+    text-decoration: none;
+}

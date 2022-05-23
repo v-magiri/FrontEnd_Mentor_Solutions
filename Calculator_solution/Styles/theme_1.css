@@ -159,6 +159,7 @@ label[for="theme3"] {
     width: 100%;
     margin-bottom: 2%;
     font-size: 32px;
+    font-weight: 700;
     text-align: end;
 }
 input:focus{

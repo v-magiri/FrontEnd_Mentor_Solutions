@@ -45,3 +45,7 @@ body{
     color:var(--white_text);
     background-color: var(--key_orange_background);
 }
+.attribution a{
+    color:var(--key_orange_background);
+    text-decoration: none;
+}
