@@ -4,3 +4,44 @@
     padding:0;
     box-sizing: border-box;
 }
+:root{
+    --main_background:hsl(0, 0%, 90%);
+    --toggle_background:hsl(0, 5%, 81%);
+    --keypad_background:hsl(0, 5%, 81%);
+    --key_orange_background:hsl(25, 98%, 40%);
+    --console_background:hsl(0, 0%, 93%);
+    --key_background:hsl(185, 42%, 37%);
+    --key_shadow:hsl(185, 58%, 25%);
+    --key_light_background:hsl(45, 7%, 89%);
+    --key_dark_shadow:hsl(35, 11%, 61%);
+    --text_color:hsl(60, 10%, 19%);
+    --white_text:#fff;
+}
+body{
+    background-color: var(--main_background);
+}
+.header{
+    color:var(--text_color);
+}
+.theme_switcherBtn{
+    background-color: var(--keypad_background);
+}
+.calc_details{
+    background-color: var(--keypad_background);
+}
+.console input{
+    color:var(--text_color);
+    background-color: var(--console_background);
+}
+.num_button{
+    background-color: var(--key_light_background);
+    box-shadow: 0 3px var(--key_dark_shadow);
+}
+.symbol{
+    color:var(--white_text);
+    background-color: var(--key_background);
+}
+.equalBtn{
+    color:var(--white_text);
+    background-color: var(--key_orange_background);
+}

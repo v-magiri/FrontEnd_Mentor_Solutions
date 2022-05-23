@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --main_background:hsl(268, 75%, 9%);
+    --toggle_background:hsl(268, 71%, 12%);
+    --keypad_background:hsl(268, 71%, 12%);
+    --console_background:hsl(268, 71%, 12%);
+    --keys_background:hsl(281, 89%, 26%);
+    --key_shadow:hsl(285, 91%, 52%);
+    --key_light_background:hsl(45, 7%, 89%);
+    --key_magenta_shadow:hsl(290, 70%, 36%);
+    --text_light_color:hsl(52, 100%, 62%);
+    --darkBlue_textColor:hsl(198, 20%, 13%);
+    --white_text:#fff;
+    --toggle_key_background:hsl(176, 100%, 44%);
+    --soft_cyan:hsl(177, 92%, 70%);
+    --dark_key_background: hsl(268, 47%, 21%);
+}
+body{
+    background-color: var(--main_background);
+}
+.header{
+    color:var(--text_light_color);
+}
+input:checked{
+    background-color: var(--toggle_key_background);
+}
+.theme_switcherBtn{
+    background-color: var(--toggle_background);
+}
+.console input{
+    background-color: var(--console_background);
+    color:var(--text_light_color);
+}
+.calc_details{
+    background-color: var(--keypad_background);
+}
+.num_button{
+    background-color: var(--dark_key_background);
+    box-shadow: 0 3px var(--key_shadow);
+    color:var(--text_light_color);
+}
+.symbol{
+    color:var(--white_text);
+    background-color: var(--keys_background);
+    box-shadow: 0 3px var(--key_shadow);
+}
+.equalBtn{
+    color:var(--darkBlue_textColor);
+    background-color: var(--toggle_key_background);
+    box-shadow: 0 3px var(--soft_cyan);
+}
