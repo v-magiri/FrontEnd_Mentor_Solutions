@@ -37,13 +37,22 @@ body{
     background-color: var(--key_light_background);
     box-shadow: 0 3px var(--key_dark_shadow);
 }
+.num_button:hover{
+    background-color: hsl(45, 7%, 100%);;
+}
 .symbol{
     color:var(--white_text);
     background-color: var(--key_background);
 }
+.symbol:hover{
+    background-color: hsl(185, 42%, 60%);
+}
 .equalBtn{
     color:var(--white_text);
     background-color: var(--key_orange_background);
+}
+.equalBtn:hover{
+    background-color:hsl(25, 98%, 60%) ;
 }
 .attribution a{
     color:var(--key_orange_background);

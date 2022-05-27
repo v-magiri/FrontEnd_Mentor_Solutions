@@ -29,6 +29,9 @@ body{
 input:checked{
     background-color: var(--toggle_key_background);
 }
+input:checked:hover{
+    background-color: hsl(176, 100%, 60%);;
+}
 .theme_switcherBtn{
     background-color: var(--toggle_background);
 }
@@ -44,15 +47,24 @@ input:checked{
     box-shadow: 0 3px var(--key_shadow);
     color:var(--text_light_color);
 }
+.num_button:hover{
+    background-color:hsl(268, 47%, 50%) ;
+}
 .symbol{
     color:var(--white_text);
     background-color: var(--keys_background);
     box-shadow: 0 3px var(--key_shadow);
 }
+.symbol:hover{
+    background-color:hsl(281, 89%, 40%) ;
+}
 .equalBtn{
     color:var(--darkBlue_textColor);
     background-color: var(--toggle_key_background);
     box-shadow: 0 3px var(--soft_cyan);
+}
+.equalBtn:hover{
+    background-color: hsl(176, 100%, 50%);
 }
 .attribution{
     color:var(--text_light_color);

@@ -15,9 +15,10 @@
     --bg-result-toggle-key: hsl(6, 63%, 50%);
     --key-shadow-result: hsl(6, 70%, 34%); 
     --text-color: hsl(221, 14%, 31%); 
+    --white-color:#fff;
 }
 body{
-    background-color: hsl(221, 14%, 31%);
+    background-color: hsl(225, 21%, 49%);
     font-family: 'League Spartan', sans-serif;
 }
 .container{
@@ -45,6 +46,9 @@ body{
 }
 input:checked {
     background-color: var(--bg-result-toggle-key);
+}
+input:checked:hover{
+    background-color: hsl(6, 63%, 60%);
 }
   
 label {
@@ -115,6 +119,7 @@ label[for="theme3"] {
     font-size: 32px;
     justify-content: center;
     gap:0.6em;
+    font-weight: 700;
     border-radius: 0.4em;
     grid-template-areas: 
                         'col_1 col_2 col_3 col_4'
@@ -168,18 +173,26 @@ input:focus{
 .num_button{
     text-align: center;
     background-color: hsl(30, 25%, 89%);
-    padding:0.4em;
+    padding:0.3em;
     border-radius: 0.4rem;
     cursor: pointer;
+    box-shadow: 0 4px var(--key-shadow-keys);
+}
+.num_button:hover{
+    background-color: hsl(30, 25%, 100%) ;
 }
 .symbol{
     text-align: center;
     border-radius: 0.4rem;
-    padding:0.4em;
+    padding:0.3em;
     border: none;
     cursor: pointer;
     color:white;
     background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 5px var(--key-shadow-del-reset);
+}
+.symbol:hover{
+    background-color: hsl(225, 21%, 75%);
 }
 #resetBtn{
     padding:0.6em 0;
@@ -190,6 +203,10 @@ input:focus{
     padding:0.6em 0;
     border-radius: 0.4rem;
     cursor: pointer;
+    box-shadow: 0 3px var(--key-shadow-result);
+}
+.equalBtn:hover{
+    background-color: hsl(6, 70%, 60%);
 }
 
 .attribution{
@@ -197,5 +214,42 @@ input:focus{
     text-align: center;
     padding:2em;
     line-height: 1.5em;
-    
+}
+.attribution a{
+    color:var(--white-color);
+}
+/*responsiveness code*/
+@media screen and (max-width:480px){
+    .container{
+        width:90%;
+    }
+    .header ,.console input,.calc_details{
+        width:90%;
+
+    }
+    .calc_details{
+        grid-template-columns: repeat(4,2em);
+        padding:0.4em 0;
+        margin:0;
+        /* justify-content: space-around; */
+        gap:0.4em;
+    }
+    .layout_row{
+        row-gap: 0.4em;
+    }
+    .col_5{
+        padding:0;
+        grid-template-columns: repeat(4,4.4em);
+        grid-template-rows: 1fr;
+        column-gap: 0.4em;
+    }
+    #del{
+        font-size: 0.6em;
+        font-weight: 700;
+        padding-top:0.7em; 
+    }
+    #resetBtn,.equalBtn{
+        font-size: 25px;
+        padding:0.4em 0;
+    }
 }
