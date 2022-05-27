@@ -225,7 +225,6 @@ input:focus{
     }
     .header ,.console input,.calc_details{
         width:90%;
-
     }
     .calc_details{
         grid-template-columns: repeat(4,2em);
