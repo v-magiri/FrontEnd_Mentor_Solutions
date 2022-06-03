@@ -12,6 +12,7 @@
     --Light_grayish_blue: hsl(223, 64%, 98%);
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 0%);
+    --black:rgba(0,0,0,0.75);
 }
 body{
     width:80%;
@@ -172,7 +173,6 @@ p{
 /* Content Styles */
 .container{
     display: flex;
-    margin-top:5%;
     margin: auto;
     padding:2rem 3rem;
     gap:5rem;
@@ -257,6 +257,7 @@ p{
     padding:1em 2.5rem;
     justify-content: center;
     width:60%;
+    cursor: pointer;
 }
 
 .quantity{
@@ -301,6 +302,9 @@ p{
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding: 0;
+        gap:2rem;
+        line-height: 2rem;
     }
     .header{
         border: none;
@@ -404,7 +408,10 @@ p{
 .product_desc{
     width:90%;
     display:flex;
-    margin:8% auto;
+    margin:auto;
+    align-content: space-between;
+    justify-content: center;
+
 }
 .product_image{
     width:100%;
@@ -503,6 +510,45 @@ p{
     }
 }
 /* to implement between the width of 768 to 820px */
-@media screen and(min-width:768px) and (max-width:820){
+@media (min-width:768px) and (max-width:820px){
+    .container{
+        width:100%;
+        gap:1.05rem;
+        padding:1.05rem 1rem;
+    }
+    .main_product_img{
+        max-width:300px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .img_controls,.hambuger_menu{
+        display: none;
+    }
+    .cartIcon{
+        width:fit-content;
+        height:fit-content;
+    }
+    .cart_txt{
+        font-size: 0.8em;
+    }
+    .cartIcon .quantity{
+        font-weight: 700;
+        font-size: 0.8em;
+    }
+    .cartBtn{
+        padding:0.6rem 0.4rem;
+    }
+    .product_action{
+        padding:0.6rem 0.8rem;
+    }
+}
 
+/* Styles for Light Box styling*/
+.lightBoxOverlay{
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: var(--black);
+    position: absolute;
 }
