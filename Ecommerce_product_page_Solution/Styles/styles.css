@@ -553,19 +553,21 @@ p{
     position: absolute;
 }
 .OverlayProductImg{
-    margin: 5rem auto auto auto;
+    margin: 3rem auto auto auto;
     position: relative;
-    width:30%;    
+    width:40%;    
     height: auto;
 }
 .closeOverlayImg{
-    text-align: end;
+    display: flex;
     padding:1rem;
+    justify-content: end;
 }
 .overlayMainProductImage{
     border-radius: 1rem;
     margin: auto;
-    max-width:100%;
+    width:100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -574,7 +576,7 @@ p{
 .overlay-thumbnail{
     display: flex;
     justify-content: space-between;
-    margin: 1rem auto auto auto;
+    margin: 0.5rem auto auto auto;
     align-items: center;
 }
 .overlayImgControls{

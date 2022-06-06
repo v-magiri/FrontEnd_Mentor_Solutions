@@ -226,12 +226,12 @@ function moveNextOverlayImage(){
         //make the index back to one
         overlayImageIndex=4    ;
     }
-    setHeroImage(overlayImageIndex);
+    setOverlayImage(overlayImageIndex);
 }
 function setOverlayImage(overlayIndex){
     overlayHeroImage.src=`Images/image-product-${overlayIndex}.jpg`;
     overlayThumbnailImage.forEach(image => {
-        image.classList.remove('active');
+        image.classList.remove('overlay-active');
     });
-    overlayThumbnailImage[imageIndex-1].classList.add('overlay-active');
+    overlayThumbnailImage[overlayIndex-1].classList.add('overlay-active');
 }
