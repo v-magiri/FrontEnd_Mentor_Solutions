@@ -183,9 +183,6 @@ p{
     height: auto;
     border-radius: 10px;
 }
-.light-box{
-    position: relative;
-}
 .thumbnail{
     display: flex;
     justify-content: space-between;
@@ -199,7 +196,7 @@ p{
     opacity: 0.75;
 }
 .active{
-    opacity: 0.75;
+    opacity: 0.8;
     border:2px solid var(--Orange)
 }
 
@@ -484,6 +481,9 @@ p{
         height: auto;
         border-radius: 10px;
     }
+    .overlay-thumbnail img{
+        width:60px;
+    }
     .img_controls,.hambuger_menu{
         display: none;
     }
@@ -551,4 +551,61 @@ p{
     left:0;
     background-color: var(--black);
     position: absolute;
+}
+.OverlayProductImg{
+    margin: 5rem auto auto auto;
+    position: relative;
+    width:30%;    
+    height: auto;
+}
+.closeOverlayImg{
+    text-align: end;
+    padding:1rem;
+}
+.overlayMainProductImage{
+    border-radius: 1rem;
+    margin: auto;
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-thumbnail{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto auto auto;
+    align-items: center;
+}
+.overlayImgControls{
+    position: absolute;
+    top:40%;
+    background-color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    width:2.5rem;
+    height: 2.5rem;
+    transition:0.5s ease-in;
+}
+.preOverlay{
+    left:-4%;
+}
+.nextOverlay{
+    right: -4%;
+}
+.overlay-thumbnail img{
+    width:70px;
+    border-radius: 10px;
+}
+.thumbnail img:hover{
+    opacity: 0.75;
+}
+.closeOverlayImg, .nextOverlay,.preOverlay{
+    cursor: pointer;
+}
+.overlay-active{
+    opacity:0.75;
+    border: 2px solid var(--Orange);
 }

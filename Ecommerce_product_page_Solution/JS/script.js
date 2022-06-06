@@ -26,6 +26,18 @@ let ItemCount=cartItemCount;
 const overlay=document.querySelector('.lightBoxOverlay');
 const productImage=document.querySelector('.product_image');
 
+//lightbox interactivity
+const closeLightBox=document.querySelector('.closeOverlayImg');
+const prevOverLayImage=document.querySelector('.preOverlay');
+const nextOverlayImage=document.querySelector('.nextOverlay');
+const overlayHeroImage=document.querySelector('.overlayMainProductImage');
+const overlayThumbnailImage=document.querySelectorAll('.overlayThumbnailImg');
+
+//adding interactivity
+closeLightBox.addEventListener('click',closeOverlay);
+prevOverLayImage.addEventListener('click',movePrevOverlayImage);
+nextOverlayImage.addEventListener('click',moveNextOverlayImage);
+
 //adding Items to Cart
 const cartBtn=document.querySelector('.cartBtn');
 
@@ -190,6 +202,36 @@ function deleteItem(){
 }
 function onHeroImageClick(){
     overlay.classList.remove('hidden');
-    let cloneNode=productImage.cloneNode(true);
-    overlay.appendChild(cloneNode);
+}
+function closeOverlay(){
+    overlay.classList.add('hidden');
+}
+function getOverImageIndex(){
+    const overlayImageIndex= parseInt(overlayHeroImage.src.split('\\').pop().split('/').pop().replace('.jpg',"").replace('image-product-','')); 
+    return overlayImageIndex;
+}
+function movePrevOverlayImage(){
+    let overlayImageIndex=getOverImageIndex();
+    overlayImageIndex++;
+    if(overlayImageIndex>4){
+        //make the index back to one
+        overlayImageIndex=1;
+    }
+    setOverlayImage(overlayImageIndex);
+}
+function moveNextOverlayImage(){
+    let overlayImageIndex=getOverImageIndex();
+    overlayImageIndex--;
+    if(overlayImageIndex<1){
+        //make the index back to one
+        overlayImageIndex=4    ;
+    }
+    setHeroImage(overlayImageIndex);
+}
+function setOverlayImage(overlayIndex){
+    overlayHeroImage.src=`Images/image-product-${overlayIndex}.jpg`;
+    overlayThumbnailImage.forEach(image => {
+        image.classList.remove('active');
+    });
+    overlayThumbnailImage[imageIndex-1].classList.add('overlay-active');
 }
